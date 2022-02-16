@@ -3,6 +3,7 @@ NAME		= libft.a
 SRCS		= ft_isalpha.c \
 			  ft_isdigit.c \
 			  ft_strlen.c \
+			  ft_isalnum.c \
 			  #ft_bzero.c \
 			  #ft_memcpy.c \
 			  #ft_memccpy.c \
@@ -17,7 +18,6 @@ SRCS		= ft_isalpha.c \
 			  #ft_strncmp.c \
 			  #ft_atoi.c \
 			  #ft_memset.c \
-			  #ft_isalnum.c \
 			  #ft_isascii.c \
 			  #ft_isprint.c \
 			  #ft_toupper.c \
