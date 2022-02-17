@@ -26,6 +26,7 @@ int ft_atoi(const char *str)
     {
         if (*str == '-')
             minus *= -1;
+        str++;
     }
     while (ft_isdigit(*str))
     {
