@@ -6,11 +6,11 @@
 /*   By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 01:16:23 by sthitiku          #+#    #+#             */
-/*   Updated: 2022/02/17 01:16:23 by sthitiku         ###   ########.fr       */
+/*   Updated: 2022/02/18 23:03:36 by sthitiku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    return (c >= 32 && c <= 126);
+	return (c >= 32 && c <= 126);
 }

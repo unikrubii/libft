@@ -6,11 +6,11 @@
 /*   By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 22:11:37 by sthitiku          #+#    #+#             */
-/*   Updated: 2022/02/16 22:11:37 by sthitiku         ###   ########.fr       */
+/*   Updated: 2022/02/18 23:05:57 by sthitiku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int  c)
+int	ft_isdigit(int c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }
