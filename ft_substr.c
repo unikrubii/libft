@@ -34,13 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-#include <stdio.h>
-int	main(void)
-{
-	char	*s;
-
-	s = ft_substr("tripouille", 1, 1);
-	printf("%s", s);
-	// free (s);
-}
