@@ -22,18 +22,25 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len == 0 || (start + 1 > ft_strlen(s)))
 	{
 		ptr = (char *)malloc(1);
-		*ptr = '\0';
+		ptr[0] = '\0';
 		return (ptr);
 	}
-	ptr = (char *)malloc(sizeof(char) * (len + 1));
+	ptr = (char *)malloc(sizeof(char) * (len));
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	if (start < ft_strlen(s))
-	{
-		while (s[start] && i < len)
-			ptr[i++] = s[start++];
-	}
+	while (i < len)
+		ptr[i++] = s[start++];
 	ptr[i] = '\0';
 	return (ptr);
+}
+
+#include <stdio.h>
+int	main(void)
+{
+	char	*s;
+
+	s = ft_substr("tripouille", 1, 1);
+	printf("%s", s);
+	// free (s);
 }
