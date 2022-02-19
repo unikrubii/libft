@@ -17,15 +17,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 	size_t	i;
 
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (len <= 0 )
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < len)
-	{
-		ptr[i] = s[(size_t)start + i];
-		i++;
-	}
-	ptr[i] = '\0';
+	ft_memcpy(ptr, s + start, len);
+	ptr[len] = '\0';
 	return (ptr);
 }
