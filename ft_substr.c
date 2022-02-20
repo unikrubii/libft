@@ -17,8 +17,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 	size_t	i;
 
-	if (!s || (len == 0 || (start + 1 > ft_strlen(s))))
+	if (!s)
 		return (NULL);
+	if (len == 0 || (start + 1 > ft_strlen(s)))
+	{
+		ptr = (char *)malloc(1);
+		ptr = NULL;
+		return (ptr);
+	}
 	ptr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
