@@ -10,11 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	count_digit(int n)
+int	count_digit(long n)
 {
+	if (n < 0)
+		return (2 + count_digit(-n / 10));
 	if (n >= 10)
 		return (1 + count_digit(n / 10));
 	return (1);
@@ -37,7 +38,7 @@ char	*ft_itoa(int n)
 	if (nb < 0)
 	{
 		result[0] = '-';
-		n = -n;
+		nb = -nb;
 	}
 	while (nb > 0)
 	{
