@@ -22,28 +22,27 @@ int	count_digit(int n)
 
 char	*ft_itoa(int n)
 {
-	int	digit;
-	int	i;
+	int		i;
 	char	*result;
+	long	nb;
 
-	digit = count_digit(n);
-	if (n < 0)
-		digit++;
-	result = (char *)malloc(sizeof(char) * (digit + 1));
+	nb = n;
+	i = count_digit(nb);
+	result = (char *)malloc(sizeof(char) * (i + 1));
 	if (!result)
 		return (NULL);
 	result[i--] = '\0';
-	if (n == 0)
+	if (nb == 0)
 		result[0] = '0';
-	if (n < 0)
+	if (nb < 0)
 	{
 		result[0] = '-';
-		n *= -1;
+		n = -n;
 	}
-	while (n > 0)
+	while (nb > 0)
 	{
-		result[i--] = (n % 10) + '0';
-		n /= 10;
+		result[i--] = (nb % 10) + '0';
+		nb /= 10;
 	}
 	return (result);
 }
