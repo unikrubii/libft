@@ -20,7 +20,7 @@ int	count_digit(int n)
 	return (1);
 }
 
-int	ten_power(int n)
+long	ten_power(int n)
 {
 	if (n > 1)
 		return (10 * ten_power(n - 1));
@@ -35,11 +35,12 @@ char	*ft_itoa(int n)
 	char	*result;
 
 	digit = count_digit(n);
+	printf("%d\n", digit);
 	result = (char *)malloc(sizeof(char) * (digit + 1));
 	if (!result)
 		return (NULL);
 	ten = ten_power(digit) / 10;
-	// printf("%d\n", ten);
+	printf("%d\n", ten);
 	i = 0;
 	while (i < digit)
 	{
