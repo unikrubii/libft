@@ -16,8 +16,8 @@ char	*ft_strnstr(const char *hs, const char *nd, size_t len)
 {
 	size_t	nlen;
 
-	if ((int)len < 0)
-		return (0);
+	// if ((int)len < 0)
+	// 	return (0);
 	nlen = ft_strlen(nd);
 	if (!nd || nd == hs)
 		return ((char *)hs);
