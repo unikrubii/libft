@@ -45,7 +45,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	first = first_i(s1, set);
 	last = last_i(s1, set);
-	size = last - first;
+	size = last - first + 1;
 	i = 0;
 	if (size == 0 && !s1 && !set)
 	{
