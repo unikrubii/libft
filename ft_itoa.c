@@ -39,6 +39,7 @@ char	*ft_itoa(int n)
 	{
 		result[0] = '-';
 		nb = -nb;
+		i--;
 	}
 	while (nb > 0)
 	{
