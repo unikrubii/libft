@@ -16,7 +16,7 @@
 size_t	first_i(char const *s1, char const *set)
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (ft_strrchr(set, s1[i]) && s1[i])
 		i++;
@@ -45,7 +45,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	first = first_i(s1, set);
 	last = last_i(s1, set);
-	size = last - first + 1;
+	size = last - first;
 	i = 0;
 	if (size == 0 && !s1 && !set)
 	{
