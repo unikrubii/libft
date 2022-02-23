@@ -6,7 +6,7 @@
 /*   By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 20:45:40 by sthitiku          #+#    #+#             */
-/*   Updated: 2022/02/20 20:45:40 by sthitiku         ###   ########.fr       */
+/*   Updated: 2022/02/23 15:17:24 by sthitiku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char		*result;
+	char			*result;
 
 	if (!s || !f)
 		return (NULL);

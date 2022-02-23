@@ -6,7 +6,7 @@
 /*   By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 15:50:36 by sthitiku          #+#    #+#             */
-/*   Updated: 2022/02/20 15:50:36 by sthitiku         ###   ########.fr       */
+/*   Updated: 2022/02/23 15:15:26 by sthitiku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		res = (char *)malloc(sizeof(char));
 		if (!res)
-	 		return (NULL);
+			return (NULL);
 	}
 	else
 	{
 		res = (char *)malloc(sizeof(char) * (size + 1));
 		while (i <= size)
-	 		res[i++] = s1[first++];
+			res[i++] = s1[first++];
 	}
 	res[i] = '\0';
 	return (res);
