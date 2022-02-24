@@ -6,7 +6,7 @@
 /*   By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 15:56:01 by sthitiku          #+#    #+#             */
-/*   Updated: 2022/02/18 22:20:31 by sthitiku         ###   ########.fr       */
+/*   Updated: 2022/02/24 19:42:59 by sthitiku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_strnstr(const char *hs, const char *nd, size_t len)
 		}
 		i++;
 	}
-	return (0); 
+	return (0);
 }
