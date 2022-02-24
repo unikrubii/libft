@@ -45,9 +45,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	first = first_i(s1, set);
 	last = last_i(s1, set);
-	size = last - first;
+	size = last - first + 1;
 	i = 0;
-	if (size == 0 && !s1 && !set)
+	if (size == 1 && first + last < size)
 	{
 		res = (char *)malloc(sizeof(char));
 		if (!res)
@@ -56,7 +56,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	else
 	{
 		res = (char *)malloc(sizeof(char) * (size + 1));
-		while (i <= size)
+		while (i < size)
 			res[i++] = s1[first++];
 	}
 	res[i] = '\0';

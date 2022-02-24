@@ -15,7 +15,12 @@
 int	count_digit(long n)
 {
 	if (n < 0)
-		return (2 + count_digit(-n / 10));
+	{
+		if (n > -10)
+			return (1 + count_digit(-n / 10));
+		else
+			return (2 + count_digit(-n / 10));
+	}
 	if (n >= 10)
 		return (1 + count_digit(n / 10));
 	return (1);
@@ -39,8 +44,6 @@ char	*ft_itoa(int n)
 	{
 		result[0] = '-';
 		nb = -nb;
-		if (nb < 10)
-			i--;
 	}
 	while (nb > 0)
 	{
