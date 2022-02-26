@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/02/27 01:59:39 by sthitiku          #+#    #+#              #
+#    Updated: 2022/02/27 01:59:39 by sthitiku         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_strlen.c ft_isalnum.c ft_isprint.c ft_isascii.c ft_toupper.c ft_tolower.c ft_atoi.c \
@@ -12,16 +24,18 @@ OBJS = $(SRCS:.c=.o)
 
 BNS_OBJS = $(BNS_SRCS:.c=.o)
 
-FLAGS = -Wall -Werror -Wextra
+CC = gcc
+
+CFLAGS = -Wall -Werror -Wextra
 
 $(NAME): $(OBJS)
-	gcc $(FLAGS) -c $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
-bonus: $(NAME)
-	gcc $(FLAGS) -c $(BNS_SRCS)
+bonus: $(NAME) $(BNS_OBJS)
+	$(CC) $(CFLAGS) -c $(BNS_SRCS)
 	ar -rcs $(NAME) $(BNS_OBJS)
 
 clean:
@@ -30,6 +44,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean all bonus
 
 .PHONY: all bonus clean fclean re
