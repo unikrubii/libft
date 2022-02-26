@@ -6,7 +6,7 @@
 /*   By: sthitiku <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 22:13:44 by sthitiku          #+#    #+#             */
-/*   Updated: 2022/02/25 22:13:44 by sthitiku         ###   ########.fr       */
+/*   Updated: 2022/02/26 08:53:08 by sthitiku         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int		i;
-	
+	int	i;
+
 	if (!lst)
-		return 0;
+		return (0);
 	i = 0;
 	while (lst != NULL)
 	{
