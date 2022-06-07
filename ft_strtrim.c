@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-size_t	first_i(char const *s1, char const *set)
+size_t	first_i(char *s1, char *set)
 {
 	size_t	i;
 
@@ -25,7 +25,7 @@ size_t	first_i(char const *s1, char const *set)
 	return (i);
 }
 
-size_t	last_i(char const *s1, char const *set)
+size_t	last_i(char *s1, char *set)
 {
 	size_t	i;
 
@@ -35,7 +35,7 @@ size_t	last_i(char const *s1, char const *set)
 	return (i);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	size_t	first;
 	size_t	last;
